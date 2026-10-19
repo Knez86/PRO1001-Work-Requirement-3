@@ -8,6 +8,9 @@ let todos = [
 // - todoList: the <ul> element to contain the todo items
 // - todoInput: the input field for new todos
 // - addButton: the button to add new todos
+const todoList = document.getElementById("todo-list");
+const todoInput = document.getElementById("todo-input");
+const addButton = document.getElementById("add-button");
 
 // Create todo item element
 function createTodoElement(todo) {
