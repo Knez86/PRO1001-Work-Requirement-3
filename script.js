@@ -44,6 +44,11 @@ function renderTodos() {
     // 1. Clear the existing list
     // 2. Loop through the todos array
     // 3. For each todo, call createTodoElement(todo) and append the result to the todo list
+    todoList.innerHTML = "";
+    todos.forEach(function(todo) {
+        todoList.appendChild(createTodoElement(todo));
+    });
+
 }
 
 // Add todo
@@ -55,6 +60,7 @@ function addTodo() {
     //    b. Add the new todo object to the todos array
     //    c. Clear the input field
     //    d. Call renderTodos() to update the display
+    
 }
 
 // Delete todo
@@ -62,6 +68,7 @@ function deleteTodo(id) {
     // TODO: Implement this function
     // 1. Remove the todo with the given id from the todos array
     // 2. Call renderTodos() to update the display
+
 }
 
 // TODO: Add a click event listener to the add button that calls addTodo
