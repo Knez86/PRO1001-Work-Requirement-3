@@ -23,9 +23,22 @@ function createTodoElement(todo) {
     // 6. Add a click event listener to the delete button that calls deleteTodo(todo.id)
     // 7. Append the span and delete button to the <li>
     // 8. Return the <li> element
+    const newTodoEl = document.createElement("li");
+    newTodoEl.classList.add("todo-item");
+    const newSpanEl = document.createElement("span");
+    newSpanEl.textContent = todo.text;
+    const delButton = document.createElement("button");
+    delButton.textContent = "Delete";
+    delButton.addEventListener("click", function() {
+        deleteTodo(todo.id)
+    });
+    newTodoEl.appendChild(newSpanEl);
+    newTodoEl.appendChild(delButton);
+    return newTodoEl;
 }
 
 // Render todos
+
 function renderTodos() {
     // TODO: Implement this function
     // 1. Clear the existing list
