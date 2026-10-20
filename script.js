@@ -60,7 +60,19 @@ function addTodo() {
     //    b. Add the new todo object to the todos array
     //    c. Clear the input field
     //    d. Call renderTodos() to update the display
-    
+    const inputText = todoInput.value;
+
+    if (inputText !== "") {
+
+        const newTodo = {
+        id: todos.length + 1,
+        text: inputText
+        };
+       
+       todos.push(newTodo);
+       todoInput.value = "";
+       renderTodos();
+    };
 }
 
 // Delete todo
